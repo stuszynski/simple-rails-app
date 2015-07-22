@@ -38,7 +38,7 @@ namespace :deploy do
 
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute "pkill -HUP unicorn"
+      execute "kill -HUP $(cat ~/shared/unicorn.pid)"
     end
   end
 
