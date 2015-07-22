@@ -36,6 +36,12 @@ set :deploy_to, '~/'
 
 namespace :deploy do
 
+  task :restart, :roles => :web do
+    run "pkill -HUP unicorn"
+  end
+
+  after "deploy", "deploy:restart"
+
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
