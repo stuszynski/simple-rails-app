@@ -43,6 +43,5 @@ group :development, :test do
   gem 'spring'
   gem 'capistrano'
   gem 'capistrano-bundler'
-  gem 'capistrano-unicorn-nginx'
 end
 
