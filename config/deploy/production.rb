@@ -5,8 +5,8 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 role :app, %w{deployer@46.101.236.91}
-role :web, %w{deploy@46.101.236.91}
-role :db,  %w{deploy@46.101.236.91}
+role :web, %w{deployer@46.101.236.91}
+role :db,  %w{deployer@46.101.236.91}
 
 
 # Extended Server Syntax
